@@ -1,0 +1,76 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\alumno.LABORATORIOS\\Desktop\\Repositorio\\TP4_SGIAMT\\CUS_Iniciar_Sesion\\CUS_Iniciar_Sesion.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\alumno.LABORATORIOS\\Desktop\\Repositorio\\TP4_SGIAMT\\CUS_Iniciar_Sesion\\CUS_Iniciar_Sesion.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\alumno.LABORATORIOS\\Desktop\\Repositorio\\TP4_SGIAMT\\CUS_Iniciar_Sesion\\CUS_Iniciar_Sesion.csproj",
+        "projectName": "CUS_Iniciar_Sesion",
+        "projectPath": "C:\\Users\\alumno.LABORATORIOS\\Desktop\\Repositorio\\TP4_SGIAMT\\CUS_Iniciar_Sesion\\CUS_Iniciar_Sesion.csproj",
+        "packagesPath": "C:\\Users\\alumno.LABORATORIOS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alumno.LABORATORIOS\\Desktop\\Repositorio\\TP4_SGIAMT\\CUS_Iniciar_Sesion\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\alumno.LABORATORIOS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net461"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net461": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net461": {
+          "dependencies": {
+            "Microsoft.AspNetCore": {
+              "target": "Package",
+              "version": "[2.1.7, )"
+            },
+            "Microsoft.AspNetCore.CookiePolicy": {
+              "target": "Package",
+              "version": "[2.1.2, )"
+            },
+            "Microsoft.AspNetCore.HttpsPolicy": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.1.3, )"
+            },
+            "Microsoft.AspNetCore.StaticFiles": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win7-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
