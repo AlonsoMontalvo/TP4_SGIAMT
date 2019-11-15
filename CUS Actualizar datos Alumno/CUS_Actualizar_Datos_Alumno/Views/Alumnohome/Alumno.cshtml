@@ -1,0 +1,114 @@
+﻿
+@model IEnumerable<CUS_Actualizar_Datos_Alumno.Models.TUsuario>
+@{
+    ViewData["Title"] = "Alumno";
+    Layout = "~/Views/Shared/_LayoutAlumno.cshtml";
+}
+
+<head>
+
+    <title>Actualizar datos del Alumno</title>
+    <link rel="stylesheet" href="~/css/RegistroStyle.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row ">
+            <div class="col-10 register-right" style="width : 70% ; float :left">
+                <h2>Actualizar datos del Alumno</h2>
+                @*<form method="post" action="#" class="cod-form">*@
+
+            <div class="form-group">
+                <label class="control-label">dni</label>
+                <input class="form-control" id="dni" />
+                <button onclick="prueba1()" >buscar </button>
+               
+            </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                Dni
+                            </th>
+                            <th>
+                                Nombre
+                            </th>
+                            <th>
+                                apellido paterno
+                            </th>
+                            <th>
+                                apellido materno
+                            </th>
+
+                        </tr>
+                    </thead>
+
+                    @foreach (var item in Model)
+                    {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PkIuDni)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VuNombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VuApaterno)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VuApaterno)
+                    </td>
+
+                    <td>
+                        <a asp-controller="TUsuarios" asp-action="Edit" class="btn btn-success" style="background-color:steelblue" asp-route-id="@item.PkIuDni">Editar</a>
+
+                    </td>
+                </tr>
+                    }
+
+
+                    </table>
+
+                    
+</div>
+
+        </div>
+    </div>
+</body>
+
+<script language="javascript">
+
+    function prueba() {
+        var categoria = document.getElementById("dni").value;
+        /*document.getElementById("preuba").innerHTML = "Resultado es: " + promedio + " %";
+        document.getElementById("DpTotalNota").innerHTML = "Resultado es: " +  Number(promedio) + " %";
+        */
+
+        document.getElementById("prueba").innerHTML = categoria;
+
+    }
+    function prueba1() {
+        var dni = document.getElementById('dni').value;
+
+        $.ajax({
+            url: "/Alumnohome/Alumno",
+            type: "GET",
+            data: { dni: dni },
+            contentType: "application/json; charset=utf-8",
+            success: function () {
+                //data is your result from controller
+                if (data.success) {
+                    alert(data.message);
+                }
+            },
+            error: function (xhr) {
+                alert('error');
+            }
+        });
+    };
+</script>
+
+@*@section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        <script src="~/js/EditarDatosAlumno.js"></script>
+    }*@
