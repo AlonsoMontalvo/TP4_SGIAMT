@@ -1,0 +1,19 @@
+consola:
+-Scaffold-DbContext "Server=DESKTOP-HNNEPQ0\ALONSO_PC;Database=BD_SGIAMT;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -force
+-Install-Package Microsoft.EntityFrameworkCore -Version 2.1.11
+
+startup:
+-var connection = @"Server=(localdb)\mssqllocaldb;Database=Blogging;Trusted_Connection=True;ConnectRetryCount=0";
+    services.AddDbContext<BloggingContext>(options => options.UseSqlServer(connection));
+-using SGIAMT.Models;
+-using Microsoft.EntityFrameworkCore;
+
+
+nugget
+:Syncfusion.HtmlToPdfConverter.QtWebKit.Net.Core
+
+-Install-package rotativa.AspNetCore -Version 1.1.1
+consola:
+
+Add-Migration Initial
+Update-Database
