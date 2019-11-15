@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29418.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGIAMT_Integracion", "SGIAMT_Integracion.csproj", "{4E9E238C-D4F7-4E0B-88FE-67DBA14ACEED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E9E238C-D4F7-4E0B-88FE-67DBA14ACEED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E9E238C-D4F7-4E0B-88FE-67DBA14ACEED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E9E238C-D4F7-4E0B-88FE-67DBA14ACEED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E9E238C-D4F7-4E0B-88FE-67DBA14ACEED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5E91D6EF-D753-4F4B-974F-08838D071C87}
+	EndGlobalSection
+EndGlobal

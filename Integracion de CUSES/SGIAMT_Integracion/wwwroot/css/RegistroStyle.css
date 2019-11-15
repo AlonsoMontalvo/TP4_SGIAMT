@@ -1,0 +1,39 @@
+﻿body {
+    background-image: linear-gradient(to right, #b23e3e, #b23e3e);
+    /*margin-top: 70px !important;*/
+    margin: 120px 0px 200px 0px !important;
+}
+
+.register-left {
+    text-align: center;
+    color: #ffffff;
+    padding: 30px;
+}
+
+    .register-left p {
+        padding: 20px 20px 0;
+    }
+
+    .register-left img {
+        width: 50%;
+        height: 50%;
+        padding-top: 2%
+    }
+
+.register-right {
+    border: none;
+    background: #f8f8f8;
+    border-top-left-radius: 10% 50%;
+    border-bottom-left-radius: 10% 50%;
+    padding: 50px;
+}
+
+    .register-right h2 {
+        text-align: center;
+        margin-bottom: 10px;
+        color: #555;
+    }
+
+.btn btn-default {
+    background: #ffd800;
+}

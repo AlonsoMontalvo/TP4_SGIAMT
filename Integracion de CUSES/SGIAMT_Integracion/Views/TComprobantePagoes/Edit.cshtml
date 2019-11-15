@@ -1,0 +1,85 @@
+﻿@model SGIAMT_Integracion.Models.TComprobantePago
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+
+<h4>TComprobantePago</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="PkIcpId" />
+            <div class="form-group">
+                <label asp-for="VcpFecha" class="control-label"></label>
+                <input asp-for="VcpFecha" class="form-control" />
+                <span asp-validation-for="VcpFecha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VcpNombre" class="control-label"></label>
+                <input asp-for="VcpNombre" class="form-control" />
+                <span asp-validation-for="VcpNombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VcpApaterno" class="control-label"></label>
+                <input asp-for="VcpApaterno" class="form-control" />
+                <span asp-validation-for="VcpApaterno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VcpAmaterno" class="control-label"></label>
+                <input asp-for="VcpAmaterno" class="form-control" />
+                <span asp-validation-for="VcpAmaterno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VcpConcepto" class="control-label"></label>
+                <input asp-for="VcpConcepto" class="form-control" />
+                <span asp-validation-for="VcpConcepto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VcpMonto" class="control-label"></label>
+                <input asp-for="VcpMonto" class="form-control" />
+                <span asp-validation-for="VcpMonto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VcpAño" class="control-label"></label>
+                <input asp-for="VcpAño" class="form-control" />
+                <span asp-validation-for="VcpAño" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VcpMes" class="control-label"></label>
+                <input asp-for="VcpMes" class="form-control" />
+                <span asp-validation-for="VcpMes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VcpDcumento" class="control-label"></label>
+                <input asp-for="VcpDcumento" class="form-control" />
+                <span asp-validation-for="VcpDcumento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FkIpId" class="control-label"></label>
+                <select asp-for="FkIpId" class="form-control" asp-items="ViewBag.FkIpId"></select>
+                <span asp-validation-for="FkIpId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+</body>
+</html>
