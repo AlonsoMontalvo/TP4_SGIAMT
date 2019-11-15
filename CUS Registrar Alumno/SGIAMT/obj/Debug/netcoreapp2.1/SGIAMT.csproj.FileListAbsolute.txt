@@ -1,0 +1,102 @@
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\bin\Debug\netcoreapp2.1\SGIAMT.deps.json
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\bin\Debug\netcoreapp2.1\SGIAMT.runtimeconfig.json
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\bin\Debug\netcoreapp2.1\SGIAMT.runtimeconfig.dev.json
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\bin\Debug\netcoreapp2.1\SGIAMT.dll
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\bin\Debug\netcoreapp2.1\SGIAMT.pdb
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\bin\Debug\netcoreapp2.1\SGIAMT.Views.dll
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\bin\Debug\netcoreapp2.1\SGIAMT.Views.pdb
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.csprojAssemblyReference.cache
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.csproj.CoreCompileInputs.cache
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.RazorAssemblyInfo.cache
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.RazorAssemblyInfo.cs
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.AssemblyInfoInputs.cache
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.AssemblyInfo.cs
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.TagHelpers.input.cache
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.TagHelpers.output.cache
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.RazorCoreGenerate.cache
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.RazorTargetAssemblyInfo.cache
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.RazorTargetAssemblyInfo.cs
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.Views.pdb
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.dll
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.pdb
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.csproj.CopyComplete
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\TNivelxTipoNivels\Create.g.cshtml.cs
+C:\Users\A SU SERVICIO\Desktop\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\EUsuarios\Create.g.cshtml.cs
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\bin\Debug\netcoreapp2.1\SGIAMT.deps.json
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\bin\Debug\netcoreapp2.1\SGIAMT.runtimeconfig.json
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\bin\Debug\netcoreapp2.1\SGIAMT.runtimeconfig.dev.json
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\bin\Debug\netcoreapp2.1\SGIAMT.dll
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\bin\Debug\netcoreapp2.1\SGIAMT.pdb
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\bin\Debug\netcoreapp2.1\SGIAMT.Views.dll
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\bin\Debug\netcoreapp2.1\SGIAMT.Views.pdb
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.csprojAssemblyReference.cache
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.csproj.CoreCompileInputs.cache
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.RazorAssemblyInfo.cache
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.RazorAssemblyInfo.cs
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.AssemblyInfoInputs.cache
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.AssemblyInfo.cs
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.TagHelpers.input.cache
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.TagHelpers.output.cache
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.RazorCoreGenerate.cache
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\EUsuarios\Create.g.cshtml.cs
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\TNivelxTipoNivels\Create.g.cshtml.cs
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.RazorTargetAssemblyInfo.cache
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.RazorTargetAssemblyInfo.cs
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.Views.pdb
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.dll
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.pdb
+C:\Users\Windows 8.1\Desktop\Repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.csproj.CopyComplete
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\bin\Debug\netcoreapp2.1\SGIAMT.deps.json
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\bin\Debug\netcoreapp2.1\SGIAMT.runtimeconfig.json
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\bin\Debug\netcoreapp2.1\SGIAMT.runtimeconfig.dev.json
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\bin\Debug\netcoreapp2.1\SGIAMT.dll
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\bin\Debug\netcoreapp2.1\SGIAMT.pdb
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\bin\Debug\netcoreapp2.1\SGIAMT.Views.dll
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\bin\Debug\netcoreapp2.1\SGIAMT.Views.pdb
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.csprojAssemblyReference.cache
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.csproj.CoreCompileInputs.cache
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.RazorAssemblyInfo.cache
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.RazorAssemblyInfo.cs
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.AssemblyInfoInputs.cache
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.AssemblyInfo.cs
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.TagHelpers.input.cache
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.TagHelpers.output.cache
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.RazorCoreGenerate.cache
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\EUsuarios\Create.g.cshtml.cs
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\TNivelxTipoNivels\Create.g.cshtml.cs
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.RazorTargetAssemblyInfo.cache
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.RazorTargetAssemblyInfo.cs
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.Views.pdb
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.dll
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.pdb
+C:\Users\A SU SERVICIO\Desktop\repor\TP4-SGIAMT\CUS Registrar Alumno\SGIAMT\obj\Debug\netcoreapp2.1\SGIAMT.csproj.CopyComplete
