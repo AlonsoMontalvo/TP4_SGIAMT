@@ -1,0 +1,123 @@
+﻿@model SGIAMT_RenovarPago.Models.TPago
+
+
+@{
+    ViewData["Title"] = "PAGO";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/RegistroStyle.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-10 register-right" style="width:40%; float:left">
+                <h2>REGISTRAR PAGO</h2>
+                <form asp-action="Create">
+                    <div class="form-group">
+                        <label asp-for="FkIuDni" class="control-label">DNI DE ALUMNO</label>
+                        <select asp-for="FkIuDni" class="form-control" asp-items="ViewBag.FkIuDni" asp-action="Create"></select>
+                        <span asp-validation-for="FkIuDni"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="VpFecha" class="control-label">FECHA DE PAGO</label>
+                        <input type="date" asp-for="VpFecha" class="form-control" />
+                        <span asp-validation-for="VpFecha"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="FkIcpId" class="control-label">CONCEPTO DE PAGO</label>
+                        <select asp-for="FkIcpId" class="form-control" asp-items="ViewBag.FkIcpId" id="CUS_RegistroPago_Select_cp" onchange="seleccion()"></select>
+                    </div>
+                    <div class="form-group">
+                        <label id="lblMonto">MONTO: </label>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="VpAño" class="control-label">AÑO</label>
+                        <input asp-for="VpAño" class="form-control" value="2019" />
+                        <span asp-validation-for="VpAño"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="VpMes" class="control-label">MES</label>
+                        <select id="CUS_RegistroPago_Select_mes" asp-for="VpMes" class="form-control">
+                            <option value="Enero">ENERO</option>
+                            <option value="Febrero">FEBRERO</option>
+                            <option value="Marzo">MARZO</option>
+                            <option value="Abril">ABRIL</option>
+                            <option value="Mayo">MAYO</option>
+                            <option value="Junio">JUNIO</option>
+                            <option value="Julio">JULIO</option>
+                            <option value="Agosto">AGOSTO</option>
+                            <option value="Septiembre">SEPTIEMBRE</option>
+                            <option value="Octubre">OCTUBRE</option>
+                            <option value="Noviembre">NOVIEMBRE</option>
+                            <option value="Diciembre">DICIEMBRE</option>
+                        </select>
+                        <span asp-validation-for="VpMes"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="VpEstado" class="control-label">Estado</label>
+                        <input asp-for="VpEstado" class="form-control" />
+                        <span asp-validation-for="VpEstado"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="REGISTRAR" class="btn btn-success" />
+                    </div>
+                    <div>
+                        <a asp-action="Index">Lista de Registros de Pago</a>
+                    </div>
+                </form>
+            </div>
+            <div class=" col-4" style="width:60% ; float:left">
+                <center>
+                    <img style="width:80% ; height:70% ; padding-top:15%" src="~/images/dinero1.jpg" alt="visual" class="img-responsive" />
+                </center>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script>
+    if (document.getElementById("CUS_RegistroPago_Select_cp").value == 1) {
+        document.getElementById("CUS_RegistroPago_Select_mes").disabled = true;
+        document.getElementById("lblMonto").innerHTML = 'MONTO: 30.00';
+    }
+    else {
+        if (document.getElementById("CUS_RegistroPago_Select_cp").value == 2) {
+            document.getElementById("CUS_RegistroPago_Select_mes").disabled = false;
+            document.getElementById("lblMonto").innerHTML = 'MONTO: 80.00';
+        }
+        else {
+            document.getElementById("CUS_RegistroPago_Select_mes").disabled = false;
+            document.getElementById("lblMonto").innerHTML = 'MONTO: 110.00';
+        }
+    }
+    function seleccion() {
+        if (document.getElementById("CUS_RegistroPago_Select_cp").value == 1) {
+            document.getElementById("CUS_RegistroPago_Select_mes").disabled = true;
+            document.getElementById("lblMonto").innerHTML = 'Monto: 30.00';
+        }
+        else {
+            if (document.getElementById("CUS_RegistroPago_Select_cp").value == 2) {
+                document.getElementById("CUS_RegistroPago_Select_mes").disabled = false;
+                document.getElementById("lblMonto").innerHTML = 'Monto: 80.00';
+            }
+            else {
+                document.getElementById("CUS_RegistroPago_Select_mes").disabled = false;
+                document.getElementById("lblMonto").innerHTML = 'Monto: 110.00';
+            }
+        }
+    }
+</script>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+
+
+
+
+
+

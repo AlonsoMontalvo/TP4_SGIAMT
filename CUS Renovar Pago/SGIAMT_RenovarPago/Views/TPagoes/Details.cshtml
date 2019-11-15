@@ -1,0 +1,62 @@
+﻿@model SGIAMT_RenovarPago.Models.TPago
+
+
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TPago</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VpFecha)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VpFecha)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VpMonto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VpMonto)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VpAño)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VpAño)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VpMes)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VpMes)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VpEstado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VpEstado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FkIcp)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FkIcp.PkIcpId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FkIuDniNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FkIuDniNavigation.PkIuDni)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.PkIpId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

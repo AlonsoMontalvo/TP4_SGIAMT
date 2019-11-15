@@ -1,0 +1,72 @@
+﻿@model IEnumerable<SGIAMT_RenovarPago.Models.TPago>
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.VpFecha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VpMonto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VpAño)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VpMes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VpEstado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FkIcp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FkIuDniNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VpFecha)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VpMonto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VpAño)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VpMes)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VpEstado)
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FkIcp.PkIcpId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FkIuDniNavigation.PkIuDni)
+                </td>
+                <td>
+                    <a class="btn btn-primary btn-lg active" role="button" aria-pressed="true" asp-action="Edit" asp-route-id="@item.PkIpId">Renovar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
