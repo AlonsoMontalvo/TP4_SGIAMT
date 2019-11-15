@@ -1,0 +1,42 @@
+﻿@model SGIAMT_GESTIONAR_PROGRESO.Models.TUsuarioxProgreso
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Detalle</h2>
+
+<div>
+    <h4>Progreso por Alumno</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VupSemana)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VupSemana)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VupNombreProfesor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VupNombreProfesor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FkIpCodNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FkIpCodNavigation.VpNombreProgreso)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FkIuDniNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FkIuDniNavigation.VuAmaterno)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.PkIuxPCod" class="btn btn-default">Edit</a> |
+    <a asp-action="Index" class="btn btn-default">Volver</a>
+</div>
