@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using CUS_Iniciar_Sesion.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CUS_Iniciar_Sesion
 {
@@ -33,6 +35,9 @@ namespace CUS_Iniciar_Sesion
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            var connection = @"Server=LACING202A-13;Database=BD_SGIAMTvsIniciar_Sesion;Trusted_Connection=True;ConnectRetryCount=0";
+            services.AddDbContext<BD_SGIAMTvsIniciar_SesionContext>(options => options.UseSqlServer(connection));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

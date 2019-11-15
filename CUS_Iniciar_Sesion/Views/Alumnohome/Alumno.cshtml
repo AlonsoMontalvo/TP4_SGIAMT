@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "Alumno";
+    Layout = "~/Views/Shared/_LayoutPerfil/_LayoutAlumno.cshtml";
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<head>
+    <link href="~/css/cssPerfil/HomeAlumno.css" rel="stylesheet" />
+    <title>Area del Alumno</title>
+
+</head>
+
+
+
+<input id="dni" />
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#dni").val(localStorage.getItem("dni"));
+    });
+</script>
