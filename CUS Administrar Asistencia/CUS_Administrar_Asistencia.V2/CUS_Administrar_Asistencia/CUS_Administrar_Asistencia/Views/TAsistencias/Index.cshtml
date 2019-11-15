@@ -1,0 +1,185 @@
+﻿@model IEnumerable<CUS_Administrar_Asistencia.Models.TAsistencia>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2 style="color:white">Administrar Asistencia</h2>
+<head>
+    <link rel="stylesheet" href="~/css/RegistroStylet.css" />
+</head>
+
+<style type="text/css">
+    .table th, .table td {
+        text-align: center;
+    }
+
+    .btn-inline {
+        margin-top: 20px;
+    }
+
+    .ui-jqgrid-view {
+        background-color: white;
+        /*height: 315px;
+        width: 1050px;
+        background-color: white;*/
+    }
+
+    /*cuerpo*/
+    .ui-jqgrid .ui-jqgrid-btable tbody tr.jqgrow td {
+        overflow: hidden;
+        /*white-space: normal;
+        padding-right: 2px;
+        cursor: pointer;
+        height:auto;
+    overflow:hidden;*/
+        cursor: pointer;
+        height: auto;
+        padding-right: 4px;
+        padding-top: 2px;
+        position: relative;
+        vertical-align: text-top;
+        white-space: normal !important;
+    }
+
+    .ui-jqgrid-bdiv {
+        height: auto !important;
+    }
+    /*cabecera*/
+    table.ui-jqgrid-htable thead th {
+        height: 40px;
+        padding: 0 2px 0 2px;
+        background: #d3dfec;
+        color: black;
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
+        font-style: initial;
+    }
+
+    .table-responsives {
+        overflow-x: hidden !important;
+        overflow-y: hidden !important;
+    }
+
+    .table tbody td {
+        padding: 1px 7px 1px 7px !important;
+        height: 30px;
+        font-size: 13px;
+        vertical-align: inherit;
+    }
+
+    table.ui-pager-table tbody td {
+        padding: 4px 7px 4px 7px !important;
+        background: #d3dfec;
+    }
+
+    #table-listar-usuarios tr td {
+        vertical-align: middle;
+        text-align: center;
+        width: 100%;
+        height: 50px;
+        border-bottom: 1px solid #ddd;
+        background-color: snow;
+        color: black;
+    }
+
+    .ui-jqgrid tr.jqgrow td {
+        white-space: nowrap !important;
+        width: 100%;
+        height: 50px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="row ">
+            <div class="col-10" style="width : 20% ; margin: 25px 0px 0px 65px">
+                <div class="form-group">
+                    <label style="color:white" for="name">Nivel</label>
+                    <select class="form-control" id="nnivel">
+                        <option selected>Seleccione</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-10" style="width : 20% ; margin: 15px 0px 50px 65px">
+                <button onclick="getlistusuarios(true)" , class="btn btn-success" style="margin: 0px 0px 0px 280px"><span class="glyphicon glyphicon-search"></span> Buscar</button>
+                <div class="form-group">
+                    <label style="color:white" for="name">Tipo de Nivel</label>
+                    <select class="form-control" id="tnivel">
+                        <option selected>Seleccione</option>
+                    </select>
+                </div>
+
+            </div>
+            @*<div class="col-10" style="width : 20%">
+                <div class="form-group">
+                    <button onclick="getlistusuarios(true)", class="btn btn-success" style="margin: 0px 0px 0px 400px"><span class="glyphicon glyphicon-search"></span> Buscar</button>
+                </div>
+            </div>*@
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body" align="center">
+                    <table id="table-listar-usuarios"></table>
+                    <div id="pager-listar-usuarios"></div>
+                    @*<table class="table table-bordered table-striped table-sm" id="tabla">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.FkIsdSemanaxDiaNavigation)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.FkIuDniNavigation)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.TaHora)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.VaEstadoAsistencia)
+                                    </th>
+                                    <th>Opciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.FkIsdSemanaxDiaNavigation.PkIsdSemanaxDia)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.FkIuDniNavigation.VuAmaterno)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.TaHora)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.VaEstadoAsistencia)
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-default" asp-action="Edit" asp-route-id="@item.PkIaAsistencia">Editar</a> |
+                                            <a class="btn btn-info" asp-action="Details" asp-route-id="@item.PkIaAsistencia">Detalles</a>
+                                            <a asp-action="Delete" asp-route-id="@item.PkIaAsistencia">Delete</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>*@
+                </div>
+            </div>
+        </div>
+        <!--/.col-->
+    </div>
+</body>
+    @section Scripts{
+        <script src="~/js/administrar_asistencia/index.js"></script>
+        <script>
+        var url = {
+           CreateAsistencia:'@Url.Action("Create","TAsistencias")'
+        }
+        </script>
+    }
