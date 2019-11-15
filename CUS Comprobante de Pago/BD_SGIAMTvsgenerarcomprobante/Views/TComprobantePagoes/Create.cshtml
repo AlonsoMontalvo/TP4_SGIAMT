@@ -1,0 +1,65 @@
+﻿@model BD_SGIAMTvsgenerarcomprobante.Models.TComprobantePago
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h4>GENERAR COMPROBANTE</h4>
+<hr />
+
+<h2 style="color:white">Comprobante de Alumno</h2>
+<head>
+
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/RegistroStyle.css" />
+</head>
+
+<div class="contenedor">
+    <div class="row">
+        <div class="col-10 register-right" style="width : 90% ; float :left">
+            <img id="boleta" runat="server" src="~/images/Boleta.png" asp-append-version="true" style="position:relative" />
+            <form asp-action="Create" method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group" style="width:10%">
+                    <label asp-for="FkIpId" class="control-label">Recibo Nº: </label>
+                    <select asp-for="FkIpId" class="form-control" asp-items="ViewBag.FkIpId"></select>
+                </div>
+                <div class="form-group" style="width:30%">
+                    <label asp-for="VcpNombre" class="control-label">Nombre: </label>
+                    <input asp-for="VcpNombre" class="form-control" />
+                    <span asp-validation-for="VcpNombre" class="text-danger"></span>
+                </div>
+                <div class="form-group" style="width:30%">
+                    <label asp-for="VcpApaterno" class="control-label">Apellido Paterno: </label>
+                    <input asp-for="VcpApaterno" class="form-control" />
+                    <span asp-validation-for="VcpApaterno" class="text-danger"></span>
+                </div>
+                <div class="form-group" style="width:30%">
+                    <label asp-for="VcpAmaterno" class="control-label">Apellido Materno: </label>
+                    <input asp-for="VcpAmaterno" class="form-control" />
+                    <span asp-validation-for="VcpAmaterno" class="text-danger"></span>
+                </div>
+                <div class="form-group" style="width:30%">
+                    <label asp-for="VcpMonto" class="control-label">Monto: </label>
+                    <input asp-for="VcpMonto" class="form-control" />
+                    <span asp-validation-for="VcpMonto" class="text-danger"></span>
+                </div>
+                <div class="form-group" style="width:30%">
+                    <label asp-for="VcpFecha" class="control-label">Fecha: </label>
+                    <input asp-for="VcpFecha" class="form-control" />
+                    <span asp-validation-for="VcpFecha" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="REGISTRAR COMPROBANTE" class="btn btn-default" />
+             
+                </div>
+            </form>
+        </div>
+        
+        </div>
+    </div>
+        <style>
+        </style>
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }

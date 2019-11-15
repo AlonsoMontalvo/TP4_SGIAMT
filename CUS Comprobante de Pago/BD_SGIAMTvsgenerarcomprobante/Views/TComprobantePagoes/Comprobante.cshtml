@@ -1,0 +1,87 @@
+﻿@model BD_SGIAMTvsgenerarcomprobante.Models.TComprobantePago
+@{
+    ViewData["Title"] = "Comprobante";
+}
+
+<h2>COMPROBANTE</h2>
+<br />
+
+<div class="contenedor">
+    <!--<img id="boleta" runat="server" src="~/images/Boleta.png" width="600" height="450" asp-append-version="true" />-->
+    <img id="boleta" runat="server" src="~/images/Boleta.png" asp-append-version="true" />
+    <label id="alumno">@ViewData["alumno"]</label>
+    <label id="fecha">fecha</label>
+    <label id="concepto">pago completo</label>
+    <label id="ao">2019</label>
+    <label id="id">id</label>
+    <label id="monto">130</label>
+    <label id="mes">Enero</label>
+    </a>
+</div>
+
+<style>
+    .contenedor {
+        position: relative;
+    }
+
+    #alumno {
+        position: absolute;
+        bottom: 207px;
+        left: 150px;
+        /*right: 690px;*/
+        color: black;
+    }
+
+    #fecha {
+        position: absolute;
+        bottom: 240px;
+        left: 150px;
+        /*right: 690px;*/
+        color: black;
+    }
+
+    #concepto {
+        position: absolute;
+        bottom: 170px;
+        left: 150px;
+        /*right: 690px;*/
+        color: black;
+    }
+
+    #ao {
+        position: absolute;
+        bottom: 134px;
+        left: 150px;
+        /*right: 760px;*/
+        color: black;
+    }
+    #id {
+        position: absolute;
+        bottom: 277px;
+        left: 390px;
+        /*right: 490px;*/
+        color: black;
+    }
+    #monto {
+        position: absolute;
+        bottom: 170px;
+        left: 390px;
+        /*right: 490px;*/
+        color: black;
+    }
+    #mes {
+        position: absolute;
+        bottom: 134px;
+        left: 390px;
+        /*right: 490px;*/
+        color: black;
+    }
+</style>
+
+<div>
+    <a asp-action="Index">Regresar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
