@@ -1,0 +1,90 @@
+﻿@model IEnumerable<SGIAMT.Models.TPago>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>LISTA DE REGISTROS DE PAGO</h2>
+@*
+    <p>
+        <a asp-action="Create">Nuevo</a>
+    </p>
+*@
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Valor
+                @*Html.DisplayNameFor(model => model.VpValor)*@
+            </th>
+            <th>
+                Fecha
+                @*@Html.DisplayNameFor(model => model.VpFecha)*@
+            </th>
+            <th>
+                Mes
+                @*@Html.DisplayNameFor(model => model.VpMes)*@
+            </th>
+            <th>
+                Año
+                @*@Html.DisplayNameFor(model => model.VpAño)*@
+            </th>
+            @*
+                <th>
+                    @Html.DisplayNameFor(model => model.VpPdf)
+                </th>
+            *@
+            <th>
+                Concepto de Pago
+                @*@Html.DisplayNameFor(model => model.FkIcp)*@
+            </th>
+            <th>
+                Dni de Usuario
+                @*@Html.DisplayNameFor(model => model.FkIuDniNavigation)*@
+            </th>
+            @*<th></th>*@
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VpValor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VpFecha)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VpMes)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VpAño)
+                </td>
+                @*
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VpPdf)
+                    </td>
+                *@
+                @*
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FkIcp.PkIcpId)
+                    </td>
+                *@
+                <td>
+                    @Html.DisplayFor(modelItem => item.FkIcp.VcpDescripcion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FkIuDniNavigation.PkIuDni)
+                </td>
+                @*
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.PkIpId">Editar</a> |
+                        <a asp-action="Details" asp-route-id="@item.PkIpId">Ver</a> |
+                        <a asp-action="Delete" asp-route-id="@item.PkIpId">Eliminar</a>
+                    </td>
+                *@
+            </tr>
+        }
+    </tbody>
+</table>
