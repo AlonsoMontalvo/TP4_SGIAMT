@@ -25,7 +25,7 @@ namespace CUS_Iniciar_Sesion.Controllers
             return View();
         }
       
-        public IActionResult LogIn()
+        public IActionResult Login()
         {
 
             return View();
@@ -37,17 +37,16 @@ namespace CUS_Iniciar_Sesion.Controllers
             public string passusr { get; set; }
             public int? tipousr { get; set; }
         }
-
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> LogIn([FromBody]login user)
+        public async Task<IActionResult> Login(int Dni, string Contra)
         {
             //    bool dni = _context.TUsuario.Any(x => x.PkIuDni == user.Dni);
             //    bool contra = _context.TUsuario.Any(con => con.VuContraseña == user.Contra);
 
 
             var us = (from c in _context.TUsuario
-                      where c.PkIuDni == user.Dni && c.VuContraseña == user.Contra
+                      where c.PkIuDni == Dni && c.VuContraseña == Contra
                       select new usr()
                       {
                           dniusr = c.PkIuDni,
@@ -56,7 +55,7 @@ namespace CUS_Iniciar_Sesion.Controllers
 
                       }).FirstOrDefault();
             var us1 = (from c in _context.TUsuario
-                       where c.PkIuDni == user.Dni && c.VuContraseña == user.Contra
+                       where c.PkIuDni == Dni && c.VuContraseña == Contra
                        select new usr()
                        {
                            passusr = c.VuContraseña,
@@ -64,7 +63,7 @@ namespace CUS_Iniciar_Sesion.Controllers
 
                        }).FirstOrDefault();
             var us2 = (from c in _context.TUsuario
-                       where c.PkIuDni == user.Dni && c.VuContraseña == user.Contra
+                       where c.PkIuDni == Dni && c.VuContraseña == Contra
                        select new usr()
                        {
                            tipousr = c.FkItuTipoUsuario
@@ -81,6 +80,7 @@ namespace CUS_Iniciar_Sesion.Controllers
                 return View();
 
             }
+
             else
             {
                 bool dni = _context.TUsuario.Any(x => x.PkIuDni == us.dniusr);
@@ -88,44 +88,48 @@ namespace CUS_Iniciar_Sesion.Controllers
 
                 if (dni == true && contra == true && us2.tipousr == 1)
                 {
-                    await Task.Delay(100);
-                    var dnip = us.dniusr;
-                    var contrap = us.passusr;
-                    var tp = us.tipousr;
+                    //await Task.Delay(100);
+                    //var dnip = us.dniusr;
+                    //var contrap = us.passusr;
+                    //var tp = us.tipousr;
                     await Task.Delay(200);
                     //return Json(new { dni = dnip, contra = contrap, tipo=tp });
                     return RedirectToAction("Alumno", "Alumnohome");
                 }
                 else if (dni == true && contra == true && us2.tipousr == 2) //ariana
                 {
-                    var dnip = us.dniusr;
-                    var contrap = us.passusr;
-                    var tp = us.tipousr;
+                    //var dnip = us.dniusr;
+                    //var contrap = us.passusr;
+                    //var tp = us.tipousr;
                     await Task.Delay(200);
-                    return RedirectToAction("Alumno", "Alumnohome");
+                    return RedirectToAction("Recepcionista", "Recepcionistahome");
                     //return Json(new { dni = dnip, contra = contrap, tipo = tp });
                 }
                 else if (dni == true && contra == true && us2.tipousr == 3) //ariana
                 {
-                    var dnip = us.dniusr;
-                    var contrap = us.passusr;
-                    var tp = us.tipousr;
+                    //var dnip = us.dniusr;
+                    //var contrap = us.passusr;
+                    //var tp = us.tipousr;
                     await Task.Delay(200);
-                    return RedirectToAction("Alumno", "Alumnohome");
+                    return RedirectToAction("Profesor", "Profesorhome");
                     // return Json(new { dni = dnip, contra = contrap, tipo = tp });
                 }
-               
+                else if (dni == false && contra == false) //ariana
+                {
+                    //var dnip = us.dniusr;
+                    //var contrap = us.passusr;
+                    //var tp = us.tipousr;
+                    await Task.Delay(200);
+                    return RedirectToAction("login", "Account");
+                    // return Json(new { dni = dnip, contra = contrap, tipo = tp });
+                }
 
                 else
                 {
                     await Task.Delay(200);
-                    return RedirectToAction("LogIn", "Account");
+                    return RedirectToAction("login", "Account");
                 }
             }
-
-
-
-
 
         }
     }

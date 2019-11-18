@@ -10,7 +10,7 @@ var getupdate = function () {
     var dni = document.getElementById('Dni').value;
     var estado = document.getElementById('Contra').value;
     $.ajax({
-        url: "/Account/LogIn",
+        url: "/Account/Login",
         type: "GET",
         data: { dni: dni, contra: estado },
         contentType: "application/json; charset=utf-8",

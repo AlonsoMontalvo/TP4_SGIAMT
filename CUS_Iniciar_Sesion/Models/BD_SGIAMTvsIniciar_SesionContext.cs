@@ -23,7 +23,7 @@ namespace CUS_Iniciar_Sesion.Models
             if (!optionsBuilder.IsConfigured)
             {
 //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=LACING202A-13;Database=BD_SGIAMTvsIniciar_Sesion;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=DESKTOP-2E54QI4\\ALONSO_PC;Database=BD_SGIAMTvsIniciar_Sesion;Trusted_Connection=True;");
             }
         }
 

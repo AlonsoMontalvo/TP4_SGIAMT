@@ -5,8 +5,6 @@
 
 
 @model CUS_Iniciar_Sesion.Models.Auxiliar.login
-
-
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -22,7 +20,7 @@
             <h1>SGIAMT <span> Academia</span></h1>
         </div>
         <div class="form-content">
-            <form asp-action="LogIn">
+            <form asp-action="Login" method="post">
 
                 <div class="form-group">
                     <label asp-for="Dni"></label>
@@ -46,31 +44,6 @@
 </body>
 </html>
 
-
-@*<script type="text/javascript">
-    $(document).ready(function () {
-        var model = {
-            dni: $("#Dni").val(),
-            password: $("#Contra").val()
-        };
-        var inputModel = JSON.stringify(model);
-        $.ajax({
-            type: 'POST',
-            contentType: 'application/json',
-            url: '/Account/LogIn',
-            data: inputModel,
-            success: function (data) {
-                sessionStorage.setItem('dni', data.dni);
-                sessionStorage.setItem('contra', data.contra);
-                sessionStorage.setItem('tipo', data.tipo);
-    
-                window.location.href = "/Alumnohome/Alumno";
-            }
-        });
-    });
-
-
-</script>*@
 
 
 @section Scripts {

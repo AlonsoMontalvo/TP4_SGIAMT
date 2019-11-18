@@ -35,7 +35,7 @@ namespace CUS_Iniciar_Sesion
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            var connection = @"Server=LACING202A-13;Database=BD_SGIAMTvsIniciar_Sesion;Trusted_Connection=True;ConnectRetryCount=0";
+            var connection = @"Server=DESKTOP-2E54QI4\ALONSO_PC;Database=BD_SGIAMTvsIniciar_Sesion;Trusted_Connection=True;ConnectRetryCount=0";
             services.AddDbContext<BD_SGIAMTvsIniciar_SesionContext>(options => options.UseSqlServer(connection));
 
         }
