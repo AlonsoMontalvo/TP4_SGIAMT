@@ -15,7 +15,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CUS_Actualizar_Datos_Alumno.Controllers
 {
-    
+
     public class AlumnohomeController : Controller
     {
         private readonly BD_SGIAMTvsActualizar_Datos_AlumnoContext _context;
@@ -23,46 +23,22 @@ namespace CUS_Actualizar_Datos_Alumno.Controllers
         {
             _context = context;
         }
-
         public IActionResult Index()
         {
             return View();
         }
 
-
-
-        //public IActionResult Alumno()
-        //{
-
-        //    return View();
-        //}
         public class Us
         {
             public int PkIuDni { get; set; }
         }
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> Alumno(Us us)
-        //{
-        //    var usuario = (from m in _context.TUsuario
-        //                  join v in _context.TTipoUsuario on m.FkItuTipoUsuario equals v.PkItuTipoUsuario
-        //                  // join ntp in _context.TNivelxTipoNivel on m.PkIuDni equals ntp.FkIuDni
-
-        //                  // where m.PkIuDni !=ntp.FkIuDni
-        //                  where m.PkIuDni == us.PkIuDni
-
-        //                  select m).ToList();
-        //    return View( usuario);
-
-        //    // return RedirectToAction("Edit", "Tusuarios");
-
-        //}
+       
         public IActionResult Alumno()
         {
             var modificaralumnos = (from m in _context.TUsuario
                                     join v in _context.TTipoUsuario on m.FkItuTipoUsuario equals v.PkItuTipoUsuario
 
-                                    where m.FkItuTipoUsuario == 1
+                                    where m.FkItuTipoUsuario == 0
 
                                     select m
                                     ).ToList();
@@ -75,9 +51,9 @@ namespace CUS_Actualizar_Datos_Alumno.Controllers
         {
             var modificaralumnos = (from m in _context.TUsuario
                                     join v in _context.TTipoUsuario on m.FkItuTipoUsuario equals v.PkItuTipoUsuario
-                                    
-                                     where m.FkItuTipoUsuario == 1 && m.PkIuDni== dni
-                                    
+
+                                    where m.FkItuTipoUsuario == 1 && m.PkIuDni == dni
+
                                     select m
                                     ).ToList();
             var bD_SGIAMTvsActualizar_Datos_AlumnoContext = modificaralumnos.ToList();
