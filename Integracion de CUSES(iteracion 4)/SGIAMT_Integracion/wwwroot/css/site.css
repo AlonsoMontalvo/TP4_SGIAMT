@@ -1,0 +1,48 @@
+﻿html, body {
+    height: 100%;
+    width: 100%;
+    /*overflow-x: hidden;*/
+}
+
+.navbar {
+    background: linear-gradient(to right,#201919,#393333);
+    padding: 5px;
+    font-size: 1.3em;
+}
+
+.navbar-brand {
+    min-height: 50px;
+    padding: 0 50px 50px;
+}
+
+    .navbar-brand img {
+        height: 57px;
+        width: 100px;
+    }
+
+.navbar-brand1 {
+    position: relative;
+    position: absolute;
+    left: 40%;
+    font-size: 1.5em;
+}
+
+.navbar-default .navbar-nav li a {
+    color: #ffffff;
+}
+
+    .navbar-default .navbar-nav li a:hover {
+        color: #ffffff;
+    }
+
+#brand-image {
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+.card {
+    margin: 10rem;
+}

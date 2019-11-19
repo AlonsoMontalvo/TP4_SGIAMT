@@ -1,0 +1,115 @@
+﻿@model IEnumerable<SGIAMT_Integracion.Controllers.Perfiles.AlumnohomeController.horarioclaseview>
+@{
+    ViewData["Title"] = "Alumno";
+    Layout = "~/Views/Shared/_LayoutPerfil/_LayoutAlumno.cshtml";
+}
+<head>
+
+    <title>Horario de Clase del Alumno</title>
+    <link rel="stylesheet" href="~/css/RegistroStyle.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row ">
+            <div class="col-10 register-right" style="width : 100% ; float :left">
+                <h2>Horario de Clase del Alumno</h2>
+
+                <form asp-action="HorarioClase" class="cod-form">
+                    <div class="form-group">
+                        <label class="control-label">dni</label>
+                        <input class="form-control" id="dni" value="72223546" name="dni" />
+
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">semana</label>
+                        <input class="form-control" id="semana" name="semana" />
+
+
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">dia</label>
+                        <input class="form-control" id="dia" name="dia" />
+                        <br />
+                        <input type="submit" value="Buscar" class="btn btn-success" id="btnbuscar">
+
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th style="background-color: #D3DFEC">
+                                    Semana
+                                </th>
+                                <th style="background-color: #D3DFEC">
+                                    Dia
+                                </th>
+                                <th style="background-color: #D3DFEC">
+                                    Nombre
+                                </th>
+                                <th style="background-color: #D3DFEC">
+                                    Horario
+                                </th>
+
+                                <th style="background-color: #D3DFEC">
+                                    Nivel
+                                </th>
+
+                                <th style="background-color: #D3DFEC">
+                                    Tipo de Nivel
+                                </th>
+
+                                <th style="background-color: #D3DFEC">
+                                    Nombre del profesor
+                                </th>
+                            </tr>
+                        </thead>
+
+                        @foreach (var item in Model)
+                        {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.semana)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.dia)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.nombre)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.horario)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.nivel)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.tiponivel)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.VupNombreProfesor)
+                        </td>
+
+                        <td>
+                            <a asp-controller="TUsuarios" asp-action="DetalleHorarioClase" class="btn btn-success" style="background-color:steelblue" asp-route-id="@item.pkasistencia">Detalle</a>
+
+                            <a asp-controller="TUsuarios" asp-action="ImprimirHorarioClase" class="btn btn-info" style="background-color:firebrick" asp-route-id="@item.pkasistencia">Imprimir Reporte</a>
+
+                        </td>
+                    </tr>
+                        }
+
+
+                    </table>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+   
+}

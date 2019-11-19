@@ -1,0 +1,86 @@
+﻿
+@model IEnumerable<SGIAMT_Integracion.Models.TUsuario>
+@{
+    ViewData["Title"] = "Alumno";
+    Layout = "~/Views/Shared/_LayoutPerfil/_LayoutAlumno.cshtml";
+}
+
+<head>
+
+    <title>Actualizar datos del Alumno</title>
+    <link rel="stylesheet" href="~/css/RegistroStyle.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row ">
+            <div class="col-10 register-right" style="width : 100% ; float :left">
+                <h2>Actualizar datos del Alumno</h2>
+
+                <form asp-action="Alumno" class="cod-form">
+                   
+                        <div class="form-group mb-2">
+                            <label class="control-label">dni</label>
+                            <input class="form-control" id="dni" name="dni" />
+                        </div>
+                        <div class="form-group mx-sm-3 mb-2">
+                            <input type="submit" value="Buscar" class="btn btn-success" id="btnbuscar">
+
+                        </div>
+                   
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Dni
+                                    </th>
+                                    <th>
+                                        Nombre
+                                    </th>
+                                    <th>
+                                        apellido paterno
+                                    </th>
+                                    <th>
+                                        apellido materno
+                                    </th>
+
+                                </tr>
+                            </thead>
+
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.PkIuDni)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.VuNombre)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.VuApaterno)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.VuApaterno)
+                                    </td>
+
+                                    <td>
+                                        <a asp-controller="TUsuarios" asp-action="Edit" class="btn btn-success" style="background-color:steelblue" asp-route-id="@item.PkIuDni">Editar</a>
+
+                                    </td>
+                                </tr>
+                            }
+
+
+                        </table>
+
+                    </form>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    
+}

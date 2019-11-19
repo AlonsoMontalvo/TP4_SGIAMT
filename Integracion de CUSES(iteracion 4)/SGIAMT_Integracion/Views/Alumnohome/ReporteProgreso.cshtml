@@ -1,0 +1,109 @@
+﻿@model IEnumerable<SGIAMT_Integracion.Controllers.Perfiles.AlumnohomeController.Detalleprogresoview>
+@{
+    ViewData["Title"] = "Alumno";
+    Layout = "~/Views/Shared/_LayoutPerfil/_LayoutAlumno.cshtml";
+}
+
+<head>
+
+    <title>Reporte de Progreso del Alumno</title>
+    <link rel="stylesheet" href="~/css/RegistroStyle.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row ">
+            <div class="col-10 register-right" style="width : 70% ; float :left">
+                <h2>Reporte de Progreso del Alumno</h2>
+
+                <form asp-action="ReporteProgreso" class="cod-form">
+                    <div class="form-group">
+                        <label class="control-label">dni</label>
+                        <input class="form-control" id="dni" value="72223546" name="dni" />
+
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">semana del progreso</label>
+                        <input class="form-control" id="semana" name="semana" />
+
+
+                    </div>
+                    <div class="form-group">
+                       
+                        <input type="submit" value="Buscar" class="btn btn-success" id="btnbuscar">
+
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th style="background-color: #D3DFEC">
+                                    Dni
+                                </th>
+
+                                <th style="background-color: #D3DFEC">
+                                    Nombre
+                                </th>
+
+                                <th style="background-color: #D3DFEC">
+                                    Semana de progreso
+                                </th>
+
+                                <th style="background-color: #D3DFEC">
+                                    
+                                    promedio de nota (decimal)
+                                </th>
+
+                                <th style="background-color: #D3DFEC">
+                                    Nombre Profesor
+                                </th>
+
+                            </tr>
+                        </thead>
+
+                        @foreach (var item in Model)
+                        {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FkIuDni)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.nombre)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.VupSemana)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DpTotalNota)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.VupNombreProfesor)
+                        </td>
+
+                        <td>
+                            <a asp-controller="TProgresoes" asp-action="DetalleProgreso" class="btn btn-success" style="background-color:steelblue" asp-route-id="@item.pkasistencia">Detalle</a>
+                           
+
+                        </td>
+                        <td>
+                            
+                            <a asp-controller="TProgresoes" asp-action="Imprimirdocumentprogreso" class="btn btn-info" style="background-color:firebrick" asp-route-id="@item.pkasistencia">Imprimir Reporte</a>
+
+                        </td>
+                    </tr>
+                        }
+
+
+                    </table>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    
+}

@@ -1,0 +1,92 @@
+﻿@model IEnumerable<SGIAMT_Integracion.Controllers.TUsuariosController.horarioclaseview>
+@{
+    ViewData["Title"] = "Alumno";
+    Layout = "~/Views/Shared/_LayoutPerfil/_LayoutAlumno.cshtml";
+}
+
+<head>
+    <link href="~/css/RegistroStyle.css" rel="stylesheet" />
+
+    <title>Horario Clase de Alumno</title>
+
+</head>
+
+<style type="text/css">
+    .table th, .table td {
+        text-align: center;
+        background-color: snow;
+    }
+</style>
+
+<body>
+       
+    <div class="container" style="padding:-150px">
+
+        <form asp-action="ImprimirHorarioClase" class="cod-form">
+
+            <div class="card">
+                <div class="form-group" style="width : 60% ; margin: 35px 0px 0px 100px">
+                    <h2 style="color:white">Horario Clase de Alumno</h2>
+                </div>
+                <br /><br />
+                      <div class="card-body">
+                          <img src="~/images/tituloHorarioclase.png" />
+                          <table class="table table-bordered table-striped table-sm" id="tabla">
+                              <thead>
+                                  <tr>
+                                      <th style="background-color: #D3DFEC">
+                                          Dni
+                                      </th>
+
+                                      <th style="background-color: #D3DFEC">
+                                          horario
+                                      </th>
+                                      <th style="background-color: #D3DFEC">
+                                          nivel
+                                      </th>
+                                      <th style="background-color: #D3DFEC">
+                                          tipo nivel
+                                      </th>
+                                      <th style="background-color: #D3DFEC">
+                                          Profesor del curso
+                                      </th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  @foreach (var item in Model)
+                                  {
+                                      <tr>
+                                          <td>
+                                              @Html.DisplayFor(modelItem => item.dia)
+                                          </td>
+                                          <td>
+                                              @Html.DisplayFor(modelItem => item.horario)
+                                          </td>
+                                          <td>
+                                              @Html.DisplayFor(modelItem => item.nivel)
+                                          </td>
+                                          <td>
+                                              @Html.DisplayFor(modelItem => item.tiponivel)
+                                          </td>
+                                          <td>
+                                              @Html.DisplayFor(modelItem => item.VupNombreProfesor)
+                                          </td>
+                                      </tr>
+                                  }
+                              </tbody>
+                          </table>
+
+
+                      </div>
+                <div class="form-group">
+                    <a asp-controller="Alumnohome" asp-action="HorarioClase" class="btn btn-primary active" role="button">atras</a>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+    @*</div>*@
+    <!--/.col-->
+
+</body>

@@ -1,0 +1,77 @@
+﻿@using System.Collections.Generic
+@using System.Linq
+@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore.Http.Authentication
+
+
+@model SGIAMT_Integracion.Models.Auxiliar.login
+
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Login and Register</title>
+    <link rel="stylesheet" href="~/css/cssPerfil/estilos.css">
+</head>
+<body>
+    <div class="cod-container">
+        <div class="form-header">
+            <img src="~/images/Logo.png" alt="Logo de CodigoMasters">
+            <h1>SGIAMT <span> Academia</span></h1>
+        </div>
+        <div class="form-content">
+          
+            <form asp-action="Login">
+                <div class="form-group">
+                    <label asp-for="Dni"></label>
+                    <input asp-for="Dni " name="Dni" id="Dni" placeholder="Dni" class="form-control" />
+                    <span asp-validation-for="Dni" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Contra"></label>
+                    <input asp-for="Contra" name="Contra" id="Contra" placeholder="Password" class="form-control" />
+                    <span asp-validation-for="Contra" class="text-danger"></span>
+                </div>
+
+
+
+                <input type="submit" class="btn btn-primary" id="btnusu" onclick="getupdate()" value="Iniciar Sesion" />
+            </form>
+        </div>
+    </div>
+    <script src="~/js/diseñologin/jquery-3.3.1.min.js"></script>
+    <script src="~/js/diseñologin/form.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+
+    
+ function getupdate() {
+    var Dni = document.getElementById('Dni').value;
+        var inputModel = JSON.stringify(dni);
+    $.ajax({
+        url: "/Account/Login",
+         type: "POST",
+        data: inputModel,    
+        contentType: "application/json; charset=utf-8",
+        success: function () {
+            //data is your result from controller
+            if (data.success) {
+                localStorage.setItem('Dni', '72223546');
+            }
+        },
+        error: function (xhr) {
+            alert('error');
+        }
+    });
+};
+</script>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    @*<script src="~/js/LoginEnter.js"></script>*@
+}
