@@ -1,0 +1,172 @@
+﻿@*@model IEnumerable<SGIAMT_Integracion.Models.TPago>
+
+    @{
+        ViewData["Title"] = "Index";
+    }
+
+    <h2>Index</h2>
+
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.VpFecha)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VpMonto)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VpAño)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VpMes)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VpEstado)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FkIcp)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FkIuDniNavigation)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VpFecha)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VpMonto)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VpAño)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VpMes)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VpEstado)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FkIcp.PkIcpId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FkIuDniNavigation.PkIuDni)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.PkIpId">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.PkIpId">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.PkIpId">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>*@
+
+@model IEnumerable<SGIAMT_Integracion.Models.TPago>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutPerfil/_LayoutAlumno.cshtml";
+}
+
+
+<head>
+    <link href="~/css/RegistroStyle.css" rel="stylesheet" />
+</head>
+<div class="col-10" style="width : 20% ; margin: 35px 0px 0px 100px">
+    <h2 style="color:white">Gestionar Pago</h2>
+</div>
+<div class="col-10" style="width : 20% ; margin: 35px 0px 0px 150px">
+    <a asp-action="CreateRenovar" class="btn btn-primary btn-primary"><i class="glyphicon glyphicon-plus-sign"></i> Registrar Pago</a>
+</div>
+
+<style type="text/css">
+    .table th, .table td {
+        text-align: center;
+        background-color: snow;
+    }
+</style>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <table class="table table-bordered table-striped table-sm" id="tabla">
+                    <thead>
+                        <tr>
+                            <th style="background-color: #D3DFEC">
+                                Dni
+                            </th>
+
+                            <th style="background-color: #D3DFEC">
+                                Fecha
+                            </th>
+                            <th style="background-color: #D3DFEC">
+                                Monto
+                            </th>
+                            <th style="background-color: #D3DFEC">
+                                Año
+                            </th>
+                            <th style="background-color: #D3DFEC">
+                                Mes
+                            </th>
+                            <th style="background-color: #D3DFEC">
+                                Estado
+                            </th>
+                            @*<th style="background-color: #D3DFEC">
+            id pago
+        </th>*@
+
+                            <th style="background-color: #D3DFEC">
+                                Opciones
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.FkIuDni)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.VpFecha)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.VpMonto)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.VpAño)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.VpMes)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.VpEstado)
+
+                            </td>
+                            @*<td>
+            @Html.DisplayFor(modelItem => item.FkIcp.PkIcpId)
+        </td>*@
+
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@item.PkIpId" class="btn btn-primary btn-info"><i class="glyphicon glyphicon-refresh"></i> Renovar Pago</a>
+
+                            </td>
+                        </tr>
+                        }
+
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--/.col-->
+</div>

@@ -1,0 +1,65 @@
+﻿@using System.Collections.Generic
+@using System.Linq
+@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore.Http.Authentication
+
+
+@model SGIAMT_Integracion.Models.Auxiliar.LoginViewModel
+
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Login and Register</title>
+    <link rel="stylesheet" href="~/css/cssPerfil/estilos.css">
+</head>
+<body>
+    <div class="cod-container">
+        <div class="form-header">
+            <img src="~/images/Logo.png" alt="Logo de CodigoMasters">
+            <h1>SGIAMT <span> Academia</span></h1>
+        </div>
+        <div class="form-content">
+            <form method="post" action="#" class="cod-form">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email " name="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password"></label>
+                    <input asp-for="Password" name="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TipoUsuario"></label>
+                    <select asp-for="TipoUsuario" name="TipoUsuario" class="form-control">
+                        <option selected>Seleccionar Alumno :</option>
+                        <option>Profesor</option>
+                        <option>Alumno</option>
+                        <option>Recepcionista</option>
+                    </select>
+
+                    <span asp-validation-for="TipoUsuario" class="text-danger"></span>
+                </div>
+                <div class=form-group>
+                    <div class="checkbox">
+                        <label asp-for="Rememberme">
+                            <input asp-for="Rememberme" name="Rememberme" />
+                            @Html.DisplayNameFor(m => m.Rememberme)
+                        </label>
+                    </div>
+                </div>
+
+
+                <button type="submit" class="btn btn-primary">login</button>
+            </form>
+        </div>
+    </div>
+    <script src="~/js/diseñologin/jquery-3.3.1.min.js"></script>
+    <script src="~/js/diseñologin/form.js"></script>
+</body>
+</html>
