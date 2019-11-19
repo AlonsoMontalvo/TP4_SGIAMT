@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29418.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CUS_Actualizar_Datos_Alumno", "CUS_Actualizar_Datos_Alumno.csproj", "{AE0F18EA-BB76-4E38-A0E7-047A18C9D54E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE0F18EA-BB76-4E38-A0E7-047A18C9D54E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE0F18EA-BB76-4E38-A0E7-047A18C9D54E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE0F18EA-BB76-4E38-A0E7-047A18C9D54E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE0F18EA-BB76-4E38-A0E7-047A18C9D54E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2A225D6E-7CE1-4A99-8225-3E4728E2E2E0}
+	EndGlobalSection
+EndGlobal
