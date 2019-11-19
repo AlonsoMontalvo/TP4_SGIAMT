@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\Desktop\\repor\\TP4-SGIAMT\\TP4_SGIAMT\\CUS Actualizar datos Alumno\\CUS_Actualizar_Datos_Alumno\\CUS_Actualizar_Datos_Alumno.csproj": {}
+    "C:\\Users\\Usuario\\Desktop\\Nueva carpeta\\CUS Actualizar datos Alumno\\CUS_Actualizar_Datos_Alumno\\CUS_Actualizar_Datos_Alumno.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\Desktop\\repor\\TP4-SGIAMT\\TP4_SGIAMT\\CUS Actualizar datos Alumno\\CUS_Actualizar_Datos_Alumno\\CUS_Actualizar_Datos_Alumno.csproj": {
+    "C:\\Users\\Usuario\\Desktop\\Nueva carpeta\\CUS Actualizar datos Alumno\\CUS_Actualizar_Datos_Alumno\\CUS_Actualizar_Datos_Alumno.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\repor\\TP4-SGIAMT\\TP4_SGIAMT\\CUS Actualizar datos Alumno\\CUS_Actualizar_Datos_Alumno\\CUS_Actualizar_Datos_Alumno.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Nueva carpeta\\CUS Actualizar datos Alumno\\CUS_Actualizar_Datos_Alumno\\CUS_Actualizar_Datos_Alumno.csproj",
         "projectName": "CUS_Actualizar_Datos_Alumno",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\repor\\TP4-SGIAMT\\TP4_SGIAMT\\CUS Actualizar datos Alumno\\CUS_Actualizar_Datos_Alumno\\CUS_Actualizar_Datos_Alumno.csproj",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\Nueva carpeta\\CUS Actualizar datos Alumno\\CUS_Actualizar_Datos_Alumno\\CUS_Actualizar_Datos_Alumno.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\repor\\TP4-SGIAMT\\TP4_SGIAMT\\CUS Actualizar datos Alumno\\CUS_Actualizar_Datos_Alumno\\obj\\",
+        "outputPath": "C:\\Users\\Usuario\\Desktop\\Nueva carpeta\\CUS Actualizar datos Alumno\\CUS_Actualizar_Datos_Alumno\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

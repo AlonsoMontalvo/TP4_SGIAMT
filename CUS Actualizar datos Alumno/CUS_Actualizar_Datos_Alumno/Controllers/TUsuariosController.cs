@@ -26,13 +26,7 @@ namespace CUS_Actualizar_Datos_Alumno.Controllers
         }
 
 
-        public IActionResult Edit()
-        {
-            //var tUsuario =  _context.TUsuario.Find(dni);
-            
-           return View();
-
-        }
+      
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
