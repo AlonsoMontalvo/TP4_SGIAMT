@@ -1,0 +1,151 @@
+﻿@model IEnumerable<SGIAMT.Controllers.TProgresoesController.Detalleprogresoview>
+@{
+    ViewData["Title"] = "Alumno";
+    Layout = "~/Views/Shared/_LayoutPerfil/_LayoutAlumno.cshtml";
+}
+
+    <head>
+        <link href="~/css/RegistroStyle.css" rel="stylesheet" />
+        <title>REPORTE DE PROGRESO DEL ALUMNO</title>
+
+    </head>
+
+<style type="text/css">
+    .table th, .table td {
+        text-align: center;
+        background-color: snow;
+    }
+</style>
+
+<body>
+   
+    <img src="~/images/tituloprogreso.png" />
+    <div class="container" style="padding:-150px">
+
+        <form asp-action="Imprimirdocumentprogreso" class="cod-form">
+
+            <div class="card">
+
+
+                <div class="card-body">
+                    <img src="~/images/tituloprogreso.png" />
+                    <br /><br />
+                    <table class="table table-bordered table-striped table-sm" id="tabla">
+                        <thead>
+                            <tr>
+                                <th style="background-color: #D3DFEC">
+                                    Dni
+                                </th>
+
+                                <th style="background-color: #D3DFEC">
+                                    Nombre
+                                </th>
+                                <th style="background-color: #D3DFEC">
+                                    Apellido paterno
+                                </th>
+                                <th style="background-color: #D3DFEC">
+                                    Apellido materno
+                                </th>
+                                <th style="background-color: #D3DFEC">
+                                   Semana
+                                </th>
+
+                                <th style="background-color: #D3DFEC">
+                                   Dia
+                                </th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.FkIuDni)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.nombre)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.apellidopa)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.apellidoma)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.VupSemana)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Vupdia)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+
+                    <table class="table table-bordered table-striped table-sm" id="tabla">
+                        <thead>
+                            <tr>
+                                <th style="background-color: #D3DFEC">
+                                    Nota de pasos
+                                </th>
+
+                                <th style="background-color: #D3DFEC">
+                                    Nota tecnica
+                                </th>
+                                <th style="background-color: #D3DFEC">
+                                    Nota Interes
+                                </th>
+                                <th style="background-color: #D3DFEC">
+                                    Nota Habilidad
+                                </th>
+
+                                <th style="background-color: #D3DFEC">
+                                    promedio de nota (decimal)
+                                </th>
+                                <th style="background-color: #D3DFEC">
+                                    observacion
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.DpNotaPasos)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.DpNotaTecnica)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.DpNotaInteres)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.DpNotaHabilidad)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.DpTotalNota)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.VpObservacion)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="form-group">
+                    <a asp-controller="Alumnohome" asp-action="ReporteProgreso" class="btn btn-primary active" role="button">atras</a>
+
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+
+
+</body>

@@ -1,0 +1,149 @@
+﻿@model IEnumerable<SGIAMT.Models.TPago>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutPerfil/_LayoutRecepcionista.cshtml";
+}
+
+
+<head>
+    <link href="~/css/RegistroStyle.css" rel="stylesheet" />
+</head>
+
+
+<style type="text/css">
+    .table th, .table td {
+        text-align: center;
+        background-color: snow;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="row ">
+            <div class="col-10" style="width : 100% ; margin: 25px 0px 0px 100px">
+                <h2 style="color:white">Gestionar Pago</h2>
+                <br />
+                <h4 style="color:white">Tipo Usuario : &nbsp; @ViewData["tipousuario"] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; correo :  &nbsp; @ViewData["correo"] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  nombre :&nbsp;&nbsp; @ViewData["nombre"] &nbsp;&nbsp; @ViewData["paterno"]&nbsp;&nbsp; @ViewData["materno"]</h4>
+              
+            </div>
+
+            @*<div class="row ">*@
+            @*<div class="form-group" style="width : 20% ; margin: 50px 0px -60px 100px">
+                <a asp-action="CreateRenovar" class="btn btn-primary btn-primary"><i class="glyphicon glyphicon-plus-sign"></i> Registrar Pago</a>
+            </div>*@
+            <form asp-action="Index" class="cod-form">
+                <div class="card">
+                    <div class="form-group" style="width : 70% ; float :left">
+
+                        <label style="color:white" class="control-label">dni</label>
+                        <input class="form-control" id="dni" name="dni" />
+                        <br />
+                        <input type="submit" value="Buscar" class="btn btn-success" id="btnbuscar">
+                        <br />
+                        <br />
+                    </div>
+
+                    <div class="card-body">
+                        <table class="table table-bordered table-striped table-sm" id="tabla">
+                            <thead>
+                                <tr>
+                                    <th style="background-color: #D3DFEC">
+                                        Dni
+                                    </th>
+
+                                    <th style="background-color: #D3DFEC">
+                                        Fecha
+                                    </th>
+                                    <th style="background-color: #D3DFEC">
+                                        Monto
+                                    </th>
+                                    <th style="background-color: #D3DFEC">
+                                        Año
+                                    </th>
+                                    <th style="background-color: #D3DFEC">
+                                        Mes
+                                    </th>
+
+                                    <th style="background-color: #D3DFEC">
+                                        Estado
+                                    </th>
+                                    @*<th style="background-color: #D3DFEC">
+                                        id pago
+                                    </th>*@
+                                    @*<th style="background-color: #D3DFEC">
+                                        tipo Usuario
+                                    </th>*@
+                                    <th style="background-color: #D3DFEC">
+                                        Opciones
+                                    </th>
+                                    <th style="background-color: #D3DFEC">
+
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.FkIuDni)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.VpFecha)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.VpMonto)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.VpAño)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.VpMes)
+                                        </td>
+
+
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.VpEstado)
+
+                                        </td>
+
+                                        @*<td>
+                                            @Html.DisplayFor(modelItem => item.FkIuDniNavigation.FkItuTipoUsuarioNavigation.VtuNombreTipoUsuario)
+
+                                        </td>*@
+                                        @*<td>
+                                            @Html.DisplayFor(modelItem => item.FkIcp.PkIcpId)
+                                        </td>*@
+                                        <td>
+                                            @if (item.VpEstado == "EN PROGRESO")
+                                            {
+
+                                                <a asp-action="Edit" asp-route-id="@item.PkIpId" class="btn btn-primary btn-danger"><i class="glyphicon glyphicon-refresh"></i> Finalizar Pago</a>
+
+
+                                            }
+                                        </td>
+                                        <td>
+                                            @if (item.VpEstado == "FINALIZADO")
+                                            {
+                                                <a asp-action="CreateRenovar" asp-route-id="@item.PkIpId" class="btn btn-primary btn-success"><i class="glyphicon glyphicon-eject"></i> renovar Pago</a>
+                                            }
+                                        </td>
+
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </form>
+        </div>
+        @*</div>*@
+        <!--/.col-->
+        </div>
+</body>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script src="~/js/BuscarRenovar.js"></script>
+}

@@ -1,0 +1,81 @@
+﻿@model SGIAMT.Models.TComprobantePago
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>TComprobantePago</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VcpFecha)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VcpFecha)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VcpNombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VcpNombre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VcpApaterno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VcpApaterno)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VcpAmaterno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VcpAmaterno)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VcpConcepto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VcpConcepto)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VcpMonto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VcpMonto)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VcpAño)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VcpAño)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VcpMes)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VcpMes)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VcpDocumento)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VcpDocumento)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FkIp)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FkIp.PkIpId)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="PkIcpId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

@@ -1,0 +1,57 @@
+﻿@model SGIAMT.Models.TUsuario
+
+<head>
+
+    <title>Inscripcion de Alumno</title>
+    <link rel="stylesheet" href="~/css/RegistroStyle.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row ">
+            <div class="col-10 register-right" style="width : 40% ; float :left">
+                <h2>Activar Cuenta de Alumno </h2>
+                <form asp-action="Activo">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label asp-for="PkIuDni" class="control-label"></label>
+                            <input asp-for="PkIuDni" class="form-control" disabled />
+                            <span asp-validation-for="PkIuDni"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="VuNombre" class="control-label"></label>
+                            <input asp-for="VuNombre" class="form-control" disabled />
+                            <span asp-validation-for="VuNombre"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="VuApaterno" class="control-label"></label>
+                            <input asp-for="VuApaterno" class="form-control" disabled />
+                            <span asp-validation-for="VuApaterno"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="VuAmaterno" class="control-label"></label>
+                            <input asp-for="VuAmaterno" class="form-control" disabled />
+                            <span asp-validation-for="VuAmaterno"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="VuCelular" class="control-label"></label>
+                            <input asp-for="VuCelular" class="form-control" disabled />
+                            <span asp-validation-for="VuCelular" style="color:black"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="VuEstado" class="control-label"></label>
+                            <input asp-for="VuEstado" class="form-control" value="Inactivo" readonly="readonly" disabled />
+                            <span asp-validation-for="VuEstado"></span>
+                        </div>
+                        <input type="submit" value="Activar cuenta" class="btn btn-success" />
+
+                    </div>
+                    <div>
+                        <a asp-controller="TUsuarios" asp-action="Index">atras</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>

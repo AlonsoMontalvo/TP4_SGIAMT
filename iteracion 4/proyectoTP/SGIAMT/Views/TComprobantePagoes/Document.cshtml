@@ -1,0 +1,99 @@
+﻿@model SGIAMT.Models.TComprobantePago
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>BOLETA</title>
+</head>
+<body>
+    <table style="width:100%">
+        <tr>
+            <td><a><img src="~/images/tituloComprobante.png" /></a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><h1>Academia Tusuy Perú</h1></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><h3>Av. Gran Chimu Nº 541-A do. NIvel, Zárate - S.J.L Lima-Perú</h3></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><h3>Telf.: 459-9022</h3></td>
+            <td></td>
+        </tr>
+        <tr style="text-align:left">
+            <td align="left" colspan="2"><img width="15" height="15" src="~/images/whatsapp.png" /> <h3>948859011 / 984005153</h3></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><h3>E-mail: informes@tusuy-peru.com / www.tusuy-peru.com</h3></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>DATOS DE PAGO</th>
+            <th>VALOR</th>
+        </tr>
+        <tr>
+            <td>ID DEL RECIBO: </td>
+            <td>@Model.PkIcpId</td>
+        </tr>
+        <tr>
+            <td>ID DE PAGO: </td>
+            <td>@Model.FkIpId</td>
+        </tr>
+        <tr>
+            <td>FECHA DE PAGO: </td>
+            <td>@Model.VcpFecha</td>
+        </tr>
+        <tr>
+            <td>ALUMNO: </td>
+            <td>@Model.VcpNombre @Model.VcpApaterno @Model.VcpAmaterno</td>
+        </tr>
+        <tr>
+            <td>CONCEPTO DE PAGO: </td>
+            <td>@Model.VcpConcepto</td>
+        </tr>
+        <tr>
+            <td>MONTO: </td>
+            <td>@Model.VcpMonto</td>
+        </tr>
+        <tr>
+            <td>AÑO: </td>
+            <td>@Model.VcpAño</td>
+        </tr>
+        <tr>
+            <td>MES: </td>
+            <td>@Model.VcpMes</td>
+        </tr>
+        <tr>
+            <td><br /><br /></td>
+            <td><br /><br /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><h3>--------------------------------</h3></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><h3>FIRMA</h3></td>
+        </tr>
+    </table>
+    <div class="form-group">
+
+        <a asp-controller="Home" asp-action="Index" class="btn btn-primary active" role="button">
+            <img src="~/images/botonatrsas.png" />
+        </a>
+    </div>
+    <style>
+    </style>
+</body>
+</html>
+
+

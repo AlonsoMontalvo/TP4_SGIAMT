@@ -1,0 +1,168 @@
+﻿
+@model IEnumerable<SGIAMT.Controllers.Perfiles.ProfesorhomeController.Profesorview>
+@{
+    ViewData["Title"] = "Profesor";
+    Layout = "~/Views/Shared/_LayoutPerfil/_LayoutProfesor.cshtml";
+}
+
+<head>
+
+
+    <title>Area del Profesor</title>
+    <link href="~/css/cssPerfil/HomeProfesor.css" rel="stylesheet" />
+</head>
+<style>
+    .register-right {
+    border: none;
+    background: #f8f8f8;
+    border-top-left-radius: 10% 50%;
+    border-bottom-left-radius: 10% 20%;
+    padding: 60px;
+        padding-top: 10px;
+}
+</style>
+<body>
+    <div class="container">
+        <div class="row ">
+            <div class="col-10 register-right" style="width : 100% ; float :left">
+
+
+
+                <br /> <br />
+                <br />
+                <br />
+                <h2>Datos de Profesor</h2>
+                <br />
+                <label style="color:black">correo:&nbsp;&nbsp;&nbsp; @ViewData["correo"]</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <label style="color:black">nombre :&nbsp;&nbsp; @ViewData["nombre"] </label><label style="color:black">&nbsp;&nbsp; @ViewData["paterno"]</label><label style="color:black">&nbsp;&nbsp; @ViewData["materno"]</label>
+                <br />
+                <br />
+                <form asp-action="Profesor" class="cod-form">
+                    @*<div class="form-group mb-2">
+                        <label style="color:black" class="control-label">dni</label>
+                        <input value="@ViewData["dni"]" id="dni" name="dni" class="form-control" type="text" readonly="readonly" />
+
+                    </div>*@
+                    <table class="table table-bordered table-striped table-sm" id="tabla">
+                        <thead>
+                            <tr>
+                                <th style="background-color: #D3DFEC">
+                                    Dni
+                                </th>
+                                <th style="background-color: #D3DFEC">
+                                    Nombre
+                                </th>
+                                <th style="background-color: #D3DFEC">
+                                    Apellido Paterno
+                                </th>
+                                <th style="background-color: #D3DFEC">
+                                    Apellido Materno
+                                </th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.PkIuDni)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.VuNombre)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.VuApaterno)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.VuAmaterno)
+                                    </td>
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+                    <table class="table table-bordered table-striped table-sm" id="tabla">
+                        <thead>
+                            <tr>
+                                <th style="background-color: #D3DFEC">
+                                    Celular
+                                </th>
+                                <th style="background-color: #D3DFEC">
+                                    Correo
+                                </th>
+                                <th style="background-color: #D3DFEC">
+                                    Direccion
+                                </th>
+                                <th style="background-color: #D3DFEC">
+                                    Fecha de Nacimiento
+                                </th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.VuCelular)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.VuCorreo)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.VuDireccion)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.DuFechaNacimiento)
+                                    </td>
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+                    <table class="table table-bordered table-striped table-sm" id="tabla">
+                        <thead>
+                            <tr>
+                                <th style="background-color: #D3DFEC">
+                                    Sexo
+                                </th>
+                                <th style="background-color: #D3DFEC">
+                                    Tipo Usuario
+                                </th>
+                                <th style="background-color: #D3DFEC">
+                                    Distrito
+                                </th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.VuSexo)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.tipousuario)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.distrito)
+                                    </td>
+
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+
+                </form>
+            </div>
+            </div>
+        </div>
+   
+</body>

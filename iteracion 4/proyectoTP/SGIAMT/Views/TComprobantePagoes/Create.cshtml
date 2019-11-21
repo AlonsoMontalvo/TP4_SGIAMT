@@ -1,0 +1,83 @@
+﻿@model SGIAMT.Models.TComprobantePago
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-10 register-right" style="width : 80% ; float :left">
+         
+            <div class="col-md-4" id="columna">
+                <h2><b>GENERAR COMPROBANTE - DATOS DE COMPROBANTE</b></h2>
+                @*<form action="/TComprobantePagoes/Select" method="post">
+                    <div class="form-group">
+                        <label class="control-label">Registros de pago en progreso:</label>
+                        <select asp-for="FkIpId" class="form-control" asp-items="ViewBag.FkIpIdAux" name="id"></select>
+                        <br />
+                        <input type="submit" value="SELECCIONAR PAGO" class="btn btn-default" />
+                    </div>
+                </form>*@
+                <form asp-action="Create">
+                    <div class="form-group">
+                        <label asp-for="FkIpId" class="control-label">ID DE PAGO:</label>
+                        <select asp-for="FkIpId" class="form-control" asp-items="ViewBag.FkIpId"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="VcpFecha" class="control-label">Fecha:</label>
+                        <select asp-for="VcpFecha" class="form-control" asp-items="ViewBag.VcpFecha"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="VcpNombre" class="control-label">Nombre: </label>
+                        <select asp-for="VcpNombre" class="form-control" asp-items="ViewBag.VcpNombre"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="VcpApaterno" class="control-label">Apellido Paterno: </label>
+                        <select asp-for="VcpApaterno" class="form-control" asp-items="ViewBag.VcpApaterno"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="VcpAmaterno" class="control-label">Apellido Materno: </label>
+                        <select asp-for="VcpAmaterno" class="form-control" asp-items="ViewBag.VcpAmaterno"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="VcpConcepto" class="control-label">Concepto : </label>
+                        <select asp-for="VcpConcepto" class="form-control" asp-items="ViewBag.VcpConcepto"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="VcpMonto" class="control-label">Monto: </label>
+                        <select asp-for="VcpMonto" class="form-control" asp-items="ViewBag.VcpMonto"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="VcpAño" class="control-label">Año: </label>
+                        <select asp-for="VcpAño" class="form-control" asp-items="ViewBag.VcpAño"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="VcpMes" class="control-label">Mes: </label>
+                        <select asp-for="VcpMes" class="form-control" asp-items="ViewBag.VcpMes"></select>
+                    </div>
+                    <div class="form-group">
+                        <a href="@Url.Action("About","Home")" target="_blank"><input type="submit" value="GENERAR COMPROBANTE" class="btn btn-success" /></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+        <style>
+
+            body {
+                background-image: linear-gradient(to right, #b23e3e, #b23e3e);
+                margin-top: 70px !important;
+            }
+
+            #columna {
+                border: 2px solid red;
+                padding: 10px;
+                border-radius: 25px;
+                background-color: white;
+            }
+        </style>
+
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }

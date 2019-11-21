@@ -1,0 +1,94 @@
+﻿@model SGIAMT.Models.TPago
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_LayoutPerfil/_LayoutAlumno.cshtml";
+}
+
+
+<head>
+    <link rel="stylesheet" href="~/css/RegistroStyle.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-10 register-right" style="width:50%;float:left">
+                <h2>Renovar Pago</h2>
+                <form asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="PkIpId" />
+
+                    <div class="form-group">
+
+                        <label asp-for="FkIuDni" class="control-label">Dni Alumno</label>
+                        <select asp-for="FkIuDni" class="form-control" asp-items="ViewBag.FkIuDni"></select>
+                        <span asp-validation-for="FkIuDni"></span>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="VpFecha" class="control-label">Fecha de Pago</label>
+                        <input type="date" asp-for="VpFecha" class="form-control" />
+                        <span asp-validation-for="VpFecha"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="VpMonto" class="control-label">Monto</label>
+                        <input asp-for="VpMonto" class="form-control" onchange="javascript : observand0()" />
+                        <span asp-validation-for="VpMonto"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="VpAño" class="control-label">Año</label>
+                        <input asp-for="VpAño" class="form-control" />
+                        <span asp-validation-for="VpAño"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="VpMes" class="control-label">Mes</label>
+                        <input asp-for="VpMes" class="form-control" />
+                        <span asp-validation-for="VpMes"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="VpEstado" class="control-label">Estado</label>
+                        <select class="form-control" id="VpEstado" name="VpEstado">
+                            <option selected>FINALIZADO</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="FkIcpId" class="control-label">Concepto de Pago</label>
+                        <select disabled asp-for="FkIcpId" class="form-control" asp-items="ViewBag.FkIcpId" id="CUS_RegistroPago_Select_cp" onchange="seleccion()"></select>
+
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                        <a asp-action="Index" class="btn btn-danger active" role="button">atras</a>
+                    </div>
+                </form>
+            </div>
+            <div class=" col-10" style="width:45% ; float:right">
+                <center>
+                    <img style="width:150% ; height:40% ; padding-top:50%" src="~/images/dinero1.jpg" alt="visual" class="img-responsive" />
+                </center>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+
+<script>
+    function observand0() {
+        var Monto = document.getElementById("Montos");
+        var Estado = document.getElementById("Estados")
+        if (Monto.selectedIndex == 1) {
+            if (Monto == 30) {
+                alert("Monto en Progreso")
+                Estado.selectedIndex == 2;
+            }
+        }
+    }
+</script>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,150 @@
+﻿@model IEnumerable<SGIAMT.Models.TProgreso>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutPerfil/_LayoutProfesor.cshtml";
+}
+
+
+<head>
+
+    <link href="~/css/RegistroStyle.css" rel="stylesheet" />
+</head>
+
+<style type="text/css">
+    .table th, .table td {
+        text-align: center;
+    }
+
+    .btn-inline {
+        margin-top: 20px;
+    }
+
+    .ui-jqgrid-view {
+        background-color: white;
+        /*height: 315px;
+        width: 1050px;
+        background-color: white;*/
+    }
+
+    /*cuerpo*/
+    .ui-jqgrid .ui-jqgrid-btable tbody tr.jqgrow td {
+        overflow: hidden;
+        /*white-space: normal;
+        padding-right: 2px;
+        cursor: pointer;
+        height:auto;
+    overflow:hidden;*/
+        cursor: pointer;
+        height: auto;
+        padding-right: 4px;
+        padding-top: 2px;
+        position: relative;
+        vertical-align: text-top;
+        white-space: normal !important;
+    }
+
+    .ui-jqgrid-bdiv {
+        height: auto !important;
+    }
+    /*cabecera*/
+    table.ui-jqgrid-htable thead th {
+        height: 40px;
+        padding: 0 2px 0 2px;
+        background: #d3dfec;
+        color: black;
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
+        font-style: initial;
+    }
+
+    .table-responsives {
+        overflow-x: hidden !important;
+        overflow-y: hidden !important;
+    }
+
+    .table tbody td {
+        padding: 1px 7px 1px 7px !important;
+        height: 30px;
+        font-size: 13px;
+        vertical-align: inherit;
+    }
+
+    table.ui-pager-table tbody td {
+        padding: 4px 7px 4px 7px !important;
+        background: #d3dfec;
+    }
+
+    #table-listar-usuarios tr td {
+        vertical-align: middle;
+        text-align: center;
+        width: 100%;
+        height: 50px;
+        border-bottom: 1px solid #ddd;
+        background-color: snow;
+        color: black;
+    }
+
+    .ui-jqgrid tr.jqgrow td {
+        white-space: nowrap !important;
+        width: 100%;
+        height: 50px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        
+        <div class="row ">
+            <div class="col-10" style="width : 100% ; margin: 25px 0px 0px 65px">
+                <h2 style="color:white">Gestionar Progreso</h2>
+                <br />
+                <h4 style="color:white">Tipo Usuario : &nbsp; @ViewData["tipousuario"] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; correo :  &nbsp; @ViewData["correo"] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  nombre :&nbsp;&nbsp; @ViewData["nombre"] &nbsp;&nbsp; @ViewData["paterno"]&nbsp;&nbsp; @ViewData["materno"]</h4>
+                <br />
+            </div>
+
+            <div class="col-10" style="width : 20% ; margin: 25px 0px 0px 65px">
+                <div class="form-group">
+                    <label style="color:white" for="name">Nivel</label>
+                    <select class="form-control" id="nnivel">
+                        <option selected>Seleccione</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-10" style="width : 20% ; margin: 15px 0px 50px 65px">
+                <button onclick="getlistusuarios(true)" , class="btn btn-success" style="margin: 0px 0px 0px 280px"><span class="glyphicon glyphicon-search"></span> Buscar</button>
+                <div class="form-group">
+                    <label style="color:white" for="name">Tipo de Nivel</label>
+                    <select class="form-control" id="tnivel">
+                        <option selected>Seleccione</option>
+                    </select>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body" align="center">
+                    <table id="table-listar-usuarios"></table>
+                    <div id="pager-listar-usuarios"></div>
+                 
+                </div>
+            </div>
+        </div>
+        <!--/.col-->
+    </div>
+</body>
+
+@section Scripts{
+    <script src="~/js/gestionar_progreso/index.js"></script>
+    <script>
+        var url = {
+           CreateProgreso:'@Url.Action("Create","TProgresoes")'
+        }
+    </script>
+}

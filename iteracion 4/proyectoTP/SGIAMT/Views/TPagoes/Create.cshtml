@@ -1,0 +1,123 @@
+﻿@model SGIAMT.Models.TPago
+
+@{
+    ViewData["Title"] = "Registrar Pago";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-10 register-right" style="width : 80% ; float :left">
+           
+            <div class="col-md-4" id="columna">
+                <h2><b>REGISTRAR PAGO</b></h2>
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="FkIuDni" class="control-label">Dni de Alumno: </label>
+                        <select asp-for="FkIuDni" class="form-control" asp-items="ViewBag.FkIuDni"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="VpFecha" class="control-label">Fecha de Pago: </label>
+                        <input asp-for="VpFecha" class="form-control" type="date" id="date" />
+                        <span asp-validation-for="VpFecha" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="FkIcpId" class="control-label">Concepto de Pago:</label>
+                        <select asp-for="FkIcpId" class="form-control" asp-items="ViewBag.FkIcpId" id="concept" onchange="selectionConcept()"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="VpMonto" class="control-label">Monto de Pago:</label>
+                        <!--<input asp-for="VpMonto" class="form-control" readonly="readonly" id="amount" />-->
+                        <select asp-for="VpMonto" class="form-control" id="amount" asp-items="ViewBag.FkIcpVcpMonto" onchange="selectionAmount()"></select>
+                        <span asp-validation-for="VpMonto" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="VpAño" class="control-label">Año: </label>
+                        <!--<input asp-for="VpAño" class="form-control" id="year"/>-->
+                        <!--<select asp-for="VpAño" class="form-control" id="year" />-->
+                        <select asp-for="VpAño" class="form-control" id="year">
+                        </select>
+                        <span asp-validation-for="VpAño" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="VpMes" class="control-label">Mes: </label>
+                        <select asp-for="VpMes" class="form-control" id="month">
+                            <option value="ENERO">ENERO</option>
+                            <option value="FEBRERO">FEBRERO</option>
+                            <option value="MARZO">MARZO</option>
+                            <option value="ABRIL">ABRIL</option>
+                            <option value="MAYO">MAYO</option>
+                            <option value="JUNIO">JUNIO</option>
+                            <option value="JULIO">JULIO</option>
+                            <option value="AGOSTO">AGOSTO</option>
+                            <option value="SEPTIEMBRE">SEPTIEMBRE</option>
+                            <option value="OCTUBRE">OCTUBRE</option>
+                            <option value="NOVIMIEMBRE">NOVIEMBRE</option>
+                            <option value="DICIEMBRE">DICIEMBRE</option>
+                        </select>
+                        <span asp-validation-for="VpMes" class="text-danger"></span>
+                    </div>
+                    <!--<div class="form-group">
+        <label asp-for="VpEstado" class="control-label"></label>
+        <input asp-for="VpEstado" class="form-control" />
+        <span asp-validation-for="VpEstado" class="text-danger"></span>
+        </div>-->
+                    <div class="form-group">
+                        <input type="submit" value="Registrar" class="btn btn-success" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+        <style>
+
+            body {
+                background-image: linear-gradient(to right, #b23e3e, #b23e3e);
+                margin-top: 70px !important;
+            }
+
+            #columna {
+                border: 2px solid red;
+                padding: 10px;
+                border-radius: 25px;
+                background-color: white;
+            }
+        </style>
+
+        <script>
+            /*
+             * OBTENER FECHA CTUAL PARA DATE
+             */
+            document.getElementById('date').valueAsDate = new Date();
+            /*
+             * LLENAR DE DATOS A YEAR
+             */
+            var year = new Date().getFullYear().toString();
+            var y = parseInt(year);
+            var j = 0;
+            let selectyear = document.getElementById('year');
+            for (var i = parseInt(y) - 1; i < parseInt(y) + 2; i++) {
+                selectyear.options[j] = new Option(i, i);
+                j++;
+            }
+            /*
+             * SELECCIONA YEAR ACTUAL QUE SIEMPRE ESTA EN LA SEGUNDA POSCION O INDEX 1
+             */
+            selectyear.selectedIndex = "1";
+            /*
+             * VINCULO ENTRE CONCEPT Y AMOUNT
+             */
+            function selectionConcept() {
+                let amount = document.getElementById('amount');
+                amount.value = document.getElementById('concept').value;
+            }
+            function selectionAmount() {
+                let concept = document.getElementById('concept');
+                concept.value = document.getElementById('amount').value;
+            }
+        </script>
+
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }
