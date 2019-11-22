@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\Desktop\\proyectoTP\\SGIAMT\\SGIAMT.csproj": {}
+    "C:\\Users\\alumno.LABORATORIOS\\Documents\\repos\\TP4_SGIAMT\\iteracion 4\\proyectoTP\\SGIAMT\\SGIAMT.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\Desktop\\proyectoTP\\SGIAMT\\SGIAMT.csproj": {
+    "C:\\Users\\alumno.LABORATORIOS\\Documents\\repos\\TP4_SGIAMT\\iteracion 4\\proyectoTP\\SGIAMT\\SGIAMT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\proyectoTP\\SGIAMT\\SGIAMT.csproj",
+        "projectUniqueName": "C:\\Users\\alumno.LABORATORIOS\\Documents\\repos\\TP4_SGIAMT\\iteracion 4\\proyectoTP\\SGIAMT\\SGIAMT.csproj",
         "projectName": "SGIAMT",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\proyectoTP\\SGIAMT\\SGIAMT.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\proyectoTP\\SGIAMT\\obj\\",
+        "projectPath": "C:\\Users\\alumno.LABORATORIOS\\Documents\\repos\\TP4_SGIAMT\\iteracion 4\\proyectoTP\\SGIAMT\\SGIAMT.csproj",
+        "packagesPath": "C:\\Users\\alumno.LABORATORIOS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alumno.LABORATORIOS\\Documents\\repos\\TP4_SGIAMT\\iteracion 4\\proyectoTP\\SGIAMT\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\alumno.LABORATORIOS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -55,7 +55,6 @@
               "version": "[2.1.2, )"
             },
             "Microsoft.NETCore.App": {
-              "suppressParent": "All",
               "target": "Package",
               "version": "[2.1.0, )",
               "autoReferenced": true
@@ -66,16 +65,10 @@
             }
           },
           "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
+            "net461"
           ],
           "assetTargetFallback": true,
-          "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "warn": true
         }
       }
     }

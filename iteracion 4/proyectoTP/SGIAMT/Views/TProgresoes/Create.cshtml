@@ -156,7 +156,13 @@
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                         <div class="form-group">
                             <label>Nombre del Progreso</label>
-                            <input class="form-control" id="nombreP" />
+                            @*<input class="form-control" id="nombreP" />*@
+                        <select id="nombreP" name="nombreP" class="form-control">
+                            <option selected>--Seleccione--</option>
+                            <option>Progreso 1</option>
+                            <option>Progreso 2</option>
+                            <option>Progreso 3</option>
+                        </select>
                         </div>
 
                         <div class="form-row">

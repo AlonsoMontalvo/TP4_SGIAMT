@@ -144,7 +144,7 @@
                 }
             }
             else if (tipousuario.selectedIndex == 2) {
-                alert("has seleccionado tipo de usuario : secretaria")
+                alert("has seleccionado tipo de usuario : Recepcionista")
                 categoria.selectedIndex = 10;
             }
             else if (tipousuario.selectedIndex == 3) {
@@ -245,9 +245,9 @@
                         <label asp-for="VuHorario" class="control-label" style="color:black"></label>
                         <select class="form-control" id="VuHorario" name="VuHorario">
                             <option selected value="1">seleccionar horarios</option>
-                            <option>4:00 - 5:00 pm </option>
-                            <option>5:00 - 6:00 pm </option>
-                            <option>6:00 - 7:00 pm </option>
+                            <option>L - M y V : 4:00 - 5:30 pm </option>
+                            <option>L - M y V : 5:30 - 7:00 pm </option>
+                            <option>L - M y V : 7:00 - 8:30 pm </option>
                         </select>
                         <span asp-validation-for="VuHorario"></span>
                     </div>
